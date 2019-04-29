@@ -1,9 +1,10 @@
 CC             ?= clang
-CFLAGS         += -Wno-visibility -Wno-incompatible-pointer-types -Wall -Wextra
-CFLAGS         += -DINVERT_COLORS -DVT100 -O2
+CFLAGS         += -Wno-visibility -Wall -Wextra
+CFLAGS         += -DINVERT_COLORS -DVT100
 LFLAGS         +=
+LDFLAGS         += -s WASM=1 -g2
 
-PROGRAM := 2048
+PROGRAM := 2048.wasm
 C_FILES := $(wildcard src/*.c)
 MERGE_FILE := src/merge_std.c
 FILTERED_C_FILES := $(filter-out src/gfx%.c src/merge%.c, $(C_FILES))
