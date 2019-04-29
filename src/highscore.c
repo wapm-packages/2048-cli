@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include "engine.h"
-#include <libintl.h>
+#include "gettext.h"
 #include <locale.h>
 
 const char *hs_dir_name  = "2048";

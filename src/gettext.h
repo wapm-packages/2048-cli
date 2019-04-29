@@ -1,0 +1,1 @@
+#define gettext(x) x
